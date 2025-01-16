@@ -5,7 +5,11 @@ import "fmt"
 const englishHelloPrefix = "Hello, "
 
 func Hello(name string) string {
-	return englishHelloPrefix + name + ".!"
+	if name == "" {
+		return "Hello, World"
+	} else {
+		return englishHelloPrefix + name
+	}
 }
 
 func main() {
